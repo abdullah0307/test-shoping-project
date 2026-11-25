@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><style>@layer base {html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; }}::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {darkMode: "class", theme: { extend: { "colors": { "tertiary-container": "#2b1701", "text-muted": "#64748B", "tertiary": "#000000", "on-secondary-container": "#005c70", "surface-container-high": "#e6e8ea", "on-surface-variant": "#44474d", "surface-tint": "#515f78", "on-surface": "#191c1e", "secondary": "#00677d", "inverse-primary": "#b9c7e4", "on-tertiary-fixed-variant": "#5d4124", "on-secondary": "#ffffff", "secondary-container": "#50d9fe", "on-primary": "#ffffff", "on-background": "#191c1e", "inverse-surface": "#2d3133", "surface-dim": "#d8dadc", "border-subtle": "#E2E8F0", "secondary-fixed-dim": "#4cd6fb", "on-tertiary-container": "#9f7d5b", "on-secondary-fixed": "#001f27", "text-main": "#0F172A", "error-container": "#ffdad6", "on-primary-fixed": "#0d1c32", "primary-container": "#0d1c32", "secondary-fixed": "#b3ebff", "tertiary-fixed": "#ffdcbd", "on-secondary-fixed-variant": "#004e5f", "surface-container": "#eceef0", "error": "#ba1a1a", "inverse-on-surface": "#eff1f3", "surface": "#f7f9fb", "on-tertiary": "#ffffff", "on-error-container": "#93000a", "background": "#f7f9fb", "outline-variant": "#c5c6cd", "surface-variant": "#e0e3e5", "on-primary-container": "#76849f", "surface-pure": "#FFFFFF", "surface-bright": "#f7f9fb", "on-primary-fixed-variant": "#39475f", "on-tertiary-fixed": "#2b1701", "surface-container-highest": "#e0e3e5", "surface-container-low": "#f2f4f6", "outline": "#75777e", "surface-container-lowest": "#ffffff", "primary": "#000000", "primary-fixed-dim": "#b9c7e4", "on-error": "#ffffff", "primary-fixed": "#d6e3ff", "tertiary-fixed-dim": "#e7bf99" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-md": "1.5rem", "space-xl": "6rem", "space-sm": "1rem", "space-lg": "3rem", "margin": "4rem", "space-xs": "0.5rem", "gutter": "2rem" }, "fontFamily": { "label-md": [ "Inter" ], "body-md": [ "Inter" ], "headline-lg-mobile": [ "Inter" ], "body-sm": [ "Inter" ], "display-hero": [ "Inter" ], "headline-sm": [ "Inter" ], "body-lg": [ "Inter" ], "label-sm": [ "Inter" ], "headline-md": [ "Inter" ], "headline-lg": [ "Inter" ], "display-hero-mobile": [ "Inter" ] }, "fontSize": { "label-md": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "body-md": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ], "headline-lg-mobile": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "body-sm": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "display-hero": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-sm": [ "18px", { "lineHeight": "24px", "fontWeight": "600" } ], "body-lg": [ "18px", { "lineHeight": "28px", "fontWeight": "400" } ], "label-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "headline-md": [ "24px", { "lineHeight": "32px", "fontWeight": "600" } ], "headline-lg": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "display-hero-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" } ] } } }};</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/></head><body class="bg-surface font-body-md text-on-surface"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[28px]">layers</span><span class="font-headline-sm text-on-surface tracking-tight">ACME CORP</span></div><nav class="hidden md:flex items-center gap-space-md" data-active-classes="bg-primary text-on-primary font-bold rounded-lg"><a aria-current="page" class="px-space-xs py-2 transition-colors bg-primary text-on-primary font-bold rounded-lg" data-path="overview" href="#">Overview</a><a class="text-body-sm text-on-surface-variant hover:text-on-surface px-space-xs py-2 transition-colors" data-path="results" href="#">Results</a><a class="text-body-sm text-on-surface-variant hover:text-on-surface px-space-xs py-2 transition-colors" data-path="services" href="#">Services</a><a class="text-body-sm text-on-surface-variant hover:text-on-surface px-space-xs py-2 transition-colors" data-path="contact" href="#">Contact</a></nav><div><a class="bg-primary text-on-primary font-label-md px-space-sm py-3 rounded-lg hover:bg-surface-tint transition-colors shadow-sm" data-path="contact" href="#">Book a Call</a></div></div></header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full">
+<!-- Hero Section -->
+<section class="relative px-6 lg:px-12 pt-12 pb-20 overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/10 pointer-events-none"></div>
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center relative z-10">
+<div class="lg:col-span-7 flex flex-col items-start gap-space-md">
+<div class="inline-flex items-center gap-space-xs bg-surface-container-high px-space-sm py-2 rounded-full border-subtle">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span class="font-label-md text-on-surface">Built exclusively for your team at Apex Roofing</span>
+</div>
+<h1 class="font-display-hero text-on-surface tracking-tight text-balance">
+          Drive 3x More Local Customers Without Increasing Ad Spend
+        </h1>
+<p class="font-body-lg text-text-muted max-w-2xl">
+          Stop bleeding budget on ineffective campaigns. We deploy hyper-targeted local acquisition systems that capture high-intent buyers right when they search for your services.
+        </p>
+<div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+<a class="bg-primary text-on-primary font-label-md px-space-md py-4 rounded-lg hover:bg-surface-tint transition-all shadow-md flex items-center gap-space-xs" href="#booking">
+            Claim Your Free Growth Audit
+            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="bg-surface-container-high text-on-surface font-label-md px-space-md py-4 rounded-lg hover:bg-surface-container-highest transition-all flex items-center gap-space-xs" href="#demo">
+<span class="material-symbols-outlined text-[18px]">play_circle</span>
+            Watch 2-Min Demo
+          </a>
+</div>
+<div class="flex items-center gap-space-md pt-space-sm text-text-muted text-body-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[16px]">check_circle</span>
+            No long-term contracts
+          </div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[16px]">check_circle</span>
+            Setup in 48 hours
+          </div>
+</div>
+</div>
+<div class="lg:col-span-5">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-xl border-subtle relative">
+<div class="absolute -top-3 -right-3 bg-secondary text-on-secondary text-label-sm px-3 py-1 rounded-full shadow-sm">
+            Live ROI Preview
+          </div>
+<h3 class="font-headline-sm text-on-surface mb-space-sm">Apex Roofing Estimated Growth</h3>
+<div class="space-y-space-sm">
+<div>
+<div class="flex justify-between text-body-sm mb-1">
+<span class="text-text-muted">Inbound Calls</span>
+<span class="font-bold text-on-surface">+142% MoM</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 75%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-body-sm mb-1">
+<span class="text-text-muted">Google Map Rankings</span>
+<span class="font-bold text-on-surface">Top 3 Position</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 90%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-body-sm mb-1">
+<span class="text-text-muted">Review Acquisition Rate</span>
+<span class="font-bold text-on-surface">4.9 ★ (128 new)</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 85%"></div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-subtle flex items-center justify-between">
+<span class="text-body-sm text-text-muted">Projected Extra Revenue</span>
+<span class="font-headline-md text-primary">$48,500/mo</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Video / Loom Mockup Section -->
+<section class="px-6 lg:px-12 py-space-xl bg-surface-container-low" id="demo">
+<div class="max-w-5xl mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-space-lg">
+<span class="text-label-sm text-text-muted uppercase tracking-wider mb-2 block">Personalized Walkthrough</span>
+<h2 class="font-headline-lg text-on-surface mb-space-sm">See How We Will Scale Apex Roofing</h2>
+<p class="font-body-md text-text-muted">A quick 2-minute breakdown analyzing your current local footprint and our exact execution strategy.</p>
+</div>
+<div class="relative rounded-xl overflow-hidden shadow-2xl bg-primary aspect-video flex items-center justify-center group cursor-pointer" data-alt="Cinematic corporate video thumbnail showing a modern dashboard screen with growth analytics and a professional consultant talking to the camera in a bright minimalist office environment." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBTWAuptpLMiUfivJTXPk9wFd9SJlahwJKIaf3drU48wDdjEKwNzm7CU9NDNKT9kiQQsAg2oYGg0Di3QagVSBxag-n_oMTBiNZe2uEx1oWasXzufKA-GwgJMrRxCAzW59hyaAZEpJvGe-fXvvYSPNhE_Is9if50-6YmM71jfkKZoV6nkRe-lEoofTUaZsnruXU1YqlBBdqbrtIVuPLSjZhdTHW7qkhM8QF9jW6dE7x1')">
+<div class="absolute inset-0 bg-primary/40 group-hover:bg-primary/30 transition-colors"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-center p-space-md text-center">
+<div class="w-20 h-20 rounded-full bg-surface-pure text-primary flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform mb-space-sm">
+<span class="material-symbols-outlined text-[36px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+<span class="text-on-primary font-headline-sm tracking-wide">Watch Personalized Breakdown for Apex Roofing</span>
+<span class="text-on-primary/80 text-body-sm mt-1">Duration: 2 minutes • Recorded specifically for your team</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Proof & Metrics Section -->
+<section class="px-6 lg:px-12 py-space-xl bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-space-lg">
+<span class="text-label-sm text-text-muted uppercase tracking-wider mb-2 block">Proven Impact</span>
+<h2 class="font-headline-lg text-on-surface mb-space-sm">Numbers That Drive Growth</h2>
+<p class="font-body-md text-text-muted">Real benchmarks achieved by local service businesses partnering with our system.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary mb-space-md">
+<span class="material-symbols-outlined text-[24px]">trending_up</span>
+</div>
+<div class="font-display-hero text-on-surface mb-space-xs">+45%</div>
+<h3 class="font-headline-sm text-on-surface mb-2">Local Visibility</h3>
+<p class="font-body-md text-text-muted">Dominate Google Local Pack rankings for high-intent keywords in your exact service radius.</p>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary mb-space-md">
+<span class="material-symbols-outlined text-[24px]">group_add</span>
+</div>
+<div class="font-display-hero text-on-surface mb-space-xs">2.4x</div>
+<h3 class="font-headline-sm text-on-surface mb-2">More Inbound Leads</h3>
+<p class="font-body-md text-text-muted">Convert casual browsers into booked appointments with friction-free multi-channel funnels.</p>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary mb-space-md">
+<span class="material-symbols-outlined text-[24px]">bolt</span>
+</div>
+<div class="font-display-hero text-on-surface mb-space-xs">100%</div>
+<h3 class="font-headline-sm text-on-surface mb-2">Automated Follow-ups</h3>
+<p class="font-body-md text-text-muted">Instant SMS and email response sequences ensure zero missed leads, even after hours.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Value Proposition / Features Grid -->
+<section class="px-6 lg:px-12 py-space-xl bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-space-lg">
+<span class="text-label-sm text-text-muted uppercase tracking-wider mb-2 block">Tailored Solutions</span>
+<h2 class="font-headline-lg text-on-surface mb-space-sm">Everything Apex Roofing Needs to Win</h2>
+<p class="font-body-md text-text-muted">Our proprietary three-pillar engine built specifically for local market domination.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="text-primary mb-space-md">
+<span class="material-symbols-outlined text-[36px]">travel_explore</span>
+</div>
+<h3 class="font-headline-md text-on-surface mb-space-xs">Local SEO Domination</h3>
+<p class="font-body-md text-text-muted mb-space-md">Optimize your Google Business Profile, local citations, and geo-targeted landing pages to capture top-of-funnel search traffic.</p>
+<ul class="space-y-2 text-body-sm text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[16px]">check</span> Citation cleanup &amp; sync</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[16px]">check</span> Geo-grid rank tracking</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[16px]">check</span> Service area expansion</li>
+</ul>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="text-primary mb-space-md">
+<span class="material-symbols-outlined text-[36px]">reviews</span>
+</div>
+<h3 class="font-headline-md text-on-surface mb-space-xs">Automated Review Generation</h3>
+<p class="font-body-md text-text-muted mb-space-md">Turn satisfied clients into your best marketing asset with automated, personalized SMS and email review requests.</p>
+<ul class="space-y-2 text-body-sm text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[16px]">check</span> Post-service SMS sequences</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[16px]">check</span> Negative feedback interception</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[16px]">check</span> Automated review syndication</li>
+</ul>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="text-primary mb-space-md">
+<span class="material-symbols-outlined text-[36px]">filter_alt</span>
+</div>
+<h3 class="font-headline-md text-on-surface mb-space-xs">High-Converting Funnels</h3>
+<p class="font-body-md text-text-muted mb-space-md">Replace clunky contact forms with lightning-fast interactive quote calculators and instant booking flows.</p>
+<ul class="space-y-2 text-body-sm text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[16px]">check</span> Instant quote calculators</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[16px]">check</span> CRM integration &amp; tagging</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[16px]">check</span> 2-way lead nurturing SMS</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Proof / Testimonial -->
+<section class="px-6 lg:px-12 py-space-xl bg-surface">
+<div class="max-w-4xl mx-auto">
+<div class="bg-surface-container-lowest p-space-lg lg:p-space-xl rounded-xl shadow-md border-subtle relative">
+<div class="absolute top-6 right-8 text-primary/10">
+<span class="material-symbols-outlined text-[80px]">format_quote</span>
+</div>
+<div class="flex items-center gap-1 mb-space-md">
+<span class="material-symbols-outlined text-amber-500 text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-amber-500 text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-amber-500 text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-amber-500 text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-amber-500 text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<blockquote class="font-headline-md text-on-surface mb-space-md relative z-10">
+          “We went from struggling for consistent leads to booking over 40 roofing jobs a month without spending an extra dime on Google Ads. The automated review system alone changed our entire local reputation.”
+        </blockquote>
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-full bg-cover bg-center" data-alt="Professional headshot of a smiling middle-aged business owner in a clean navy polo shirt, standing in front of a branded service vehicle." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCq5SAM2VaCnP7FoHsWbhETfBM8xFvzgBUv4xKQEga4WG7SmOiDOmxrlD9SvU3PG1NipmVhBCPo4uU6Pbvhs-nMS2yGWlvY0bnENngxcVRQL2CKyli21HH0Def5-zbhtiapSjio9bdmWGfKP4eAcEtxgzdB1fjYgTLcZvPNbib5W9Ih7B1jaCES1dqD6GL4cJLjwFFXHe0rjKv00tbbi2XAI0d8ahc4Kw3cjLNXTMTl')"></div>
+<div>
+<div class="font-headline-sm text-on-surface">Marcus Vance</div>
+<div class="text-body-sm text-text-muted">Owner, Vance Elite Exteriors</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Booking / Contact Form Section -->
+<section class="px-6 lg:px-12 py-space-xl bg-surface-container-low" id="booking">
+<div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<span class="text-label-sm text-text-muted uppercase tracking-wider">Take Action</span>
+<h2 class="font-headline-lg text-on-surface">Schedule Your 15-Minute Strategy Call</h2>
+<p class="font-body-md text-text-muted">
+          Pick a time that works for your team. We will review your current local footprint live and map out a custom growth blueprint for Apex Roofing.
+        </p>
+<div class="space-y-space-sm">
+<div class="flex items-center gap-space-xs text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+            No sales pressure or generic pitches
+          </div>
+<div class="flex items-center gap-space-xs text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+            Custom local competitor analysis included
+          </div>
+<div class="flex items-center gap-space-xs text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+            Actionable takeaways you can use immediately
+          </div>
+</div>
+</div>
+<div class="lg:col-span-7">
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-xl border-subtle">
+<h3 class="font-headline-sm text-on-surface mb-space-md">Select Date &amp; Time</h3>
+<div class="space-y-space-md">
+<div>
+<label class="block text-label-md text-on-surface mb-space-xs">Available Dates (This Week)</label>
+<div class="grid grid-cols-3 gap-2">
+<button class="p-3 text-center rounded-lg border-subtle bg-surface-container hover:bg-primary hover:text-on-primary transition-colors text-body-sm font-medium">
+                  Tomorrow<br/><span class="text-xs opacity-80">Oct 24</span>
+</button>
+<button class="p-3 text-center rounded-lg bg-primary text-on-primary transition-colors text-body-sm font-medium shadow-sm">
+                  Thursday<br/><span class="text-xs opacity-80">Oct 25</span>
+</button>
+<button class="p-3 text-center rounded-lg border-subtle bg-surface-container hover:bg-primary hover:text-on-primary transition-colors text-body-sm font-medium">
+                  Friday<br/><span class="text-xs opacity-80">Oct 26</span>
+</button>
+</div>
+</div>
+<div>
+<label class="block text-label-md text-on-surface mb-space-xs">Select Time Slot (EST)</label>
+<div class="grid grid-cols-3 gap-2">
+<button class="p-2 text-center rounded-lg border-subtle bg-surface-container hover:bg-primary hover:text-on-primary transition-colors text-body-sm">10:00 AM</button>
+<button class="p-2 text-center rounded-lg bg-primary text-on-primary transition-colors text-body-sm font-medium shadow-sm">01:30 PM</button>
+<button class="p-2 text-center rounded-lg border-subtle bg-surface-container hover:bg-primary hover:text-on-primary transition-colors text-body-sm">04:00 PM</button>
+</div>
+</div>
+<div class="space-y-space-xs">
+<div>
+<label class="block text-label-md text-on-surface mb-1">Your Name</label>
+<input class="w-full px-space-sm py-3 rounded-lg bg-surface border-subtle text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary" placeholder="John Smith" type="text"/>
+</div>
+<div>
+<label class="block text-label-md text-on-surface mb-1">Work Email</label>
+<input class="w-full px-space-sm py-3 rounded-lg bg-surface border-subtle text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary" placeholder="john@apexroofing.com" type="email"/>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary font-label-md py-4 rounded-lg hover:bg-surface-tint transition-colors shadow-md">
+              Confirm 15-Minute Strategy Call
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-low py-12"><div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[24px]">layers</span><span class="font-headline-sm text-on-surface">ACME CORP</span></div><p class="text-body-sm text-text-muted">© 2024 Acme Corp. All rights reserved.</p><div class="flex gap-space-sm"><a class="text-body-sm text-text-muted hover:text-on-surface" href="#">Privacy Policy</a><a class="text-body-sm text-text-muted hover:text-on-surface" href="#">Terms of Service</a></div></div></footer></body></html>

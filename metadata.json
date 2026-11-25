@@ -1,0 +1,6 @@
+{
+  "name": "ACME Corp — B2B Growth & Client Portal",
+  "description": "Conversion-focused B2B local growth platform with strategy call booking, ROI audit calculator, client portal, and Firebase user database management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

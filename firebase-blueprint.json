@@ -1,0 +1,311 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "Registered client or admin user profile and personalized growth forecast metrics.",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "description": "Firebase Authentication UID.",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "Verified account email address.",
+          "minLength": 3,
+          "maxLength": 254
+        },
+        "displayName": {
+          "type": "string",
+          "description": "Full name of the account holder.",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "photoURL": {
+          "type": "string",
+          "description": "Profile avatar URL.",
+          "maxLength": 500
+        },
+        "role": {
+          "type": "string",
+          "enum": ["user", "admin"],
+          "description": "Access control role."
+        },
+        "status": {
+          "type": "string",
+          "enum": ["active", "suspended"],
+          "description": "Account lifecycle status."
+        },
+        "companyName": {
+          "type": "string",
+          "description": "Client organization name displayed on personalized landing and portal views.",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "industry": {
+          "type": "string",
+          "description": "Local service vertical.",
+          "maxLength": 80
+        },
+        "phone": {
+          "type": "string",
+          "description": "Business contact phone number.",
+          "maxLength": 30
+        },
+        "planTier": {
+          "type": "string",
+          "enum": ["Growth Audit", "Local Domination", "Enterprise"],
+          "description": "Assigned service tier."
+        },
+        "projectedRevenue": {
+          "type": "number",
+          "description": "Projected monthly extra revenue in USD."
+        },
+        "inboundCallsGrowth": {
+          "type": "number",
+          "description": "Projected month-over-month inbound call growth percentage."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server creation timestamp."
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server last-updated timestamp."
+        }
+      },
+      "required": [
+        "uid",
+        "email",
+        "displayName",
+        "photoURL",
+        "role",
+        "status",
+        "companyName",
+        "industry",
+        "phone",
+        "planTier",
+        "projectedRevenue",
+        "inboundCallsGrowth",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "Admin": {
+      "title": "Admin",
+      "description": "Authoritative admin role grant document keyed by UID.",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "minLength": 3,
+          "maxLength": 254
+        },
+        "grantedBy": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["uid", "email", "grantedBy", "createdAt"]
+    },
+    "Booking": {
+      "title": "Booking",
+      "description": "Scheduled 15-minute strategy call booking.",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "userEmail": {
+          "type": "string",
+          "format": "email",
+          "minLength": 3,
+          "maxLength": 254
+        },
+        "contactName": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "workEmail": {
+          "type": "string",
+          "format": "email",
+          "minLength": 3,
+          "maxLength": 254
+        },
+        "companyName": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "dateLabel": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 40
+        },
+        "timeSlot": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 20
+        },
+        "status": {
+          "type": "string",
+          "enum": ["pending", "confirmed", "completed", "cancelled"]
+        },
+        "confirmationCode": {
+          "type": "string",
+          "minLength": 4,
+          "maxLength": 24,
+          "pattern": "^[A-Z0-9\\-]+$"
+        },
+        "notes": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "userId",
+        "userEmail",
+        "contactName",
+        "workEmail",
+        "companyName",
+        "dateLabel",
+        "timeSlot",
+        "status",
+        "confirmationCode",
+        "notes",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "Audit": {
+      "title": "Audit",
+      "description": "Backend-computed local growth audit and ROI projection.",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "companyName": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "city": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "monthlyCalls": {
+          "type": "number"
+        },
+        "avgTicketValue": {
+          "type": "number"
+        },
+        "monthlyAdSpend": {
+          "type": "number"
+        },
+        "currentReviews": {
+          "type": "number"
+        },
+        "projectedExtraRevenue": {
+          "type": "number"
+        },
+        "projectedCallsLiftPct": {
+          "type": "number"
+        },
+        "visibilityScore": {
+          "type": "number"
+        },
+        "recommendations": {
+          "type": "array",
+          "description": "Up to 5 prioritized growth recommendations."
+        },
+        "status": {
+          "type": "string",
+          "enum": ["submitted", "in_review", "blueprint_ready"]
+        },
+        "adminNotes": {
+          "type": "string",
+          "maxLength": 1000
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "userId",
+        "companyName",
+        "city",
+        "monthlyCalls",
+        "avgTicketValue",
+        "monthlyAdSpend",
+        "currentReviews",
+        "projectedExtraRevenue",
+        "projectedCallsLiftPct",
+        "visibilityScore",
+        "recommendations",
+        "status",
+        "adminNotes",
+        "createdAt",
+        "updatedAt"
+      ]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/User" },
+      "description": "Client and admin user profiles with isolated PII access."
+    },
+    "/admins/{adminUid}": {
+      "schema": { "$ref": "#/entities/Admin" },
+      "description": "Trusted admin role registry checked by security rules."
+    },
+    "/bookings/{bookingId}": {
+      "schema": { "$ref": "#/entities/Booking" },
+      "description": "15-minute strategy call bookings scoped to owner and admins."
+    },
+    "/audits/{auditId}": {
+      "schema": { "$ref": "#/entities/Audit" },
+      "description": "Client growth audit submissions and ROI projections."
+    }
+  }
+}
